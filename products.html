@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/filepond-plugin-image-preview.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header-refresh.css" />
     <link rel="apple-touch-icon" sizes="57x57" href="img/content/favicons/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="img/content/favicons/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="img/content/favicons/apple-icon-72x72.png" />
@@ -445,24 +446,17 @@
                                         <use xlink:href="#icon-menu"></use>
                                     </svg>
                                 </button>
-                                <button class="header__toggle-search toggle-search">
-                                    <svg class="icon-icon-search">
-                                        <use xlink:href="#icon-search"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="header__search">
-                                <form class="form-search" action="#" method="GET">
-                                    <div class="form-search__container"><span class="form-search__icon-left">
-                        <svg class="icon-icon-search">
-                          <use xlink:href="#icon-search"></use>
-                        </svg></span>
-                                        <input class="form-search__input" type="text" placeholder="Search..." />
-                                    </div>
-                                </form>
                             </div>
                         </div>
                         <div class="header__col-right col d-flex align-items-center">
+                            <!--Theme switcher icon -->
+                            <div class="header__themes">
+                                <a href="javascript:void(0)" id="theme-toggle">
+                                    <svg width="27" height="27">
+                                        <use xlink:href="#icon-settings"></use>
+                                    </svg>
+                                </a>
+                            </div>
                             <div class="header__language dropdown">
                                 <button class="header__toggle-language" type="button" data-toggle="dropdown" data-tippy-content="Language" data-tippy-placement="bottom">
                                     <svg class="icon-icon-language">
@@ -596,9 +590,9 @@
                                             </div>
                                         </div>
                                         <div class="dropdown-menu__divider"></div><a class="dropdown-menu__item dropdown-menu__link-all" href="#">View all Notifications
-                        <svg class="icon-icon-keyboard-right">
-                          <use xlink:href="#icon-keyboard-right"></use>
-                        </svg></a>
+                                        <svg class="icon-icon-keyboard-right">
+                                            <use xlink:href="#icon-keyboard-right"></use>
+                                        </svg></a>
                                     </div>
                                 </div>
                                 <div class="header__messages header__tools-item">
@@ -767,9 +761,9 @@
                                             </div>
                                         </div>
                                         <div class="dropdown-menu__divider"></div><a class="dropdown-menu__item dropdown-menu__link-all" href="#">View all Messages
-                        <svg class="icon-icon-keyboard-right">
-                          <use xlink:href="#icon-keyboard-right"></use>
-                        </svg></a>
+                                        <svg class="icon-icon-keyboard-right">
+                                            <use xlink:href="#icon-keyboard-right"></use>
+                                        </svg></a>
                                     </div>
                                 </div>
                             </div>
@@ -1964,6 +1958,7 @@
     <script src="js/vendor/scrollmagic/ScrollMagic.min.js"></script>
     <script src="js/vendor/scrollmagic/debug.addIndicators.min.js"></script>
     <script src="js/components.js"></script>
+    <script src="js/themeSwitcher.js"></script>
     <script src="js/common.js"></script>
 </body>
 

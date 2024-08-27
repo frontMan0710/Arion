@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="css/filepond-plugin-image-preview.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header-refresh.css" />
+    <link rel="stylesheet" href="css/orders-refresh.css" />
     <link rel="apple-touch-icon" sizes="57x57" href="img/content/favicons/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="img/content/favicons/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="img/content/favicons/apple-icon-72x72.png" />
@@ -445,24 +447,17 @@
                                         <use xlink:href="#icon-menu"></use>
                                     </svg>
                                 </button>
-                                <button class="header__toggle-search toggle-search">
-                                    <svg class="icon-icon-search">
-                                        <use xlink:href="#icon-search"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="header__search">
-                                <form class="form-search" action="#" method="GET">
-                                    <div class="form-search__container"><span class="form-search__icon-left">
-                        <svg class="icon-icon-search">
-                          <use xlink:href="#icon-search"></use>
-                        </svg></span>
-                                        <input class="form-search__input" type="text" placeholder="Search..." />
-                                    </div>
-                                </form>
                             </div>
                         </div>
                         <div class="header__col-right col d-flex align-items-center">
+                            <!--Theme switcher icon -->
+                            <div class="header__themes">
+                                <a href="javascript:void(0)" id="theme-toggle">
+                                    <svg width="27" height="27">
+                                        <use xlink:href="#icon-settings"></use>
+                                    </svg>
+                                </a>
+                            </div>
                             <div class="header__language dropdown">
                                 <button class="header__toggle-language" type="button" data-toggle="dropdown" data-tippy-content="Language" data-tippy-placement="bottom">
                                     <svg class="icon-icon-language">
@@ -596,9 +591,9 @@
                                             </div>
                                         </div>
                                         <div class="dropdown-menu__divider"></div><a class="dropdown-menu__item dropdown-menu__link-all" href="#">View all Notifications
-                        <svg class="icon-icon-keyboard-right">
-                          <use xlink:href="#icon-keyboard-right"></use>
-                        </svg></a>
+                                        <svg class="icon-icon-keyboard-right">
+                                            <use xlink:href="#icon-keyboard-right"></use>
+                                        </svg></a>
                                     </div>
                                 </div>
                                 <div class="header__messages header__tools-item">
@@ -767,9 +762,9 @@
                                             </div>
                                         </div>
                                         <div class="dropdown-menu__divider"></div><a class="dropdown-menu__item dropdown-menu__link-all" href="#">View all Messages
-                        <svg class="icon-icon-keyboard-right">
-                          <use xlink:href="#icon-keyboard-right"></use>
-                        </svg></a>
+                                        <svg class="icon-icon-keyboard-right">
+                                            <use xlink:href="#icon-keyboard-right"></use>
+                                        </svg></a>
                                     </div>
                                 </div>
                             </div>
@@ -822,25 +817,24 @@
                 <div class="sidebar__content" data-simplebar="data-simplebar">
                     <nav class="sidebar__nav">
                         <ul class="sidebar__menu">
-                            <li class="sidebar__menu-item"><a class="sidebar__link" href="index.html" aria-expanded="false"><span class="sidebar__link-icon">
+                            <li class="sidebar__menu-item"><a class="sidebar__link" href="index.html" aria-expanded="true"><span class="sidebar__link-icon">
                       <svg class="icon-icon-dashboard">
                         <use xlink:href="#icon-dashboard"></use>
                       </svg></span><span class="sidebar__link-text">Dashboard</span></a>
                             </li>
-                            <li class="sidebar__menu-item"><a class="sidebar__link active" href="products.html" data-toggle="collapse" data-target="#E-Commerce" aria-expanded="true"><span class="sidebar__link-icon">
+
+                            <!--<li class="sidebar__menu-item"><a class="sidebar__link" href="products.html" data-toggle="collapse" data-target="#E-Commerce" aria-expanded="false"><span class="sidebar__link-icon">
                       <svg class="icon-icon-cart">
                         <use xlink:href="#icon-cart"></use>
                       </svg></span><span class="sidebar__link-text">E-Commerce</span><span class="sidebar__link-arrow">
                       <svg class="icon-icon-keyboard-down">
                         <use xlink:href="#icon-keyboard-down"></use>
                       </svg></span></a>
-                                <div class="collapse show" id="E-Commerce">
+                                <div class="collapse" id="E-Commerce">
                                     <ul class="sidebar__collapse-menu">
                                         <li class="sidebar__menu-item"><a class="sidebar__link" href="products.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Products</span></a>
                                         </li>
                                         <li class="sidebar__menu-item"><a class="sidebar__link" href="product-add.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Add Product</span></a>
-                                        </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link active" href="orders.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Orders</span></a>
                                         </li>
                                         <li class="sidebar__menu-item"><a class="sidebar__link" href="order-details.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Order Details</span></a>
                                         </li>
@@ -870,42 +864,42 @@
                                         </li>
                                     </ul>
                                 </div>
+                            </li>-->
+
+                            <li class="sidebar__menu-item"><a class="sidebar__link active" href="orders.html" aria-expanded="false"><span class="sidebar__link-icon">
+                      <svg class="icon-icon-invoice">
+                        <use xlink:href="#icon-invoice"></use>
+                      </svg></span><span class="sidebar__link-text">Orders</span><span class="badge badge--red">30</span></a>
                             </li>
-                            <li class="sidebar__menu-item"><a class="sidebar__link" href="calendar.html" aria-expanded="false"><span class="sidebar__link-icon">
-                      <svg class="icon-icon-calendar">
-                        <use xlink:href="#icon-calendar"></use>
-                      </svg></span><span class="sidebar__link-text">Calendar</span></a>
-                            </li>
-                            <li class="sidebar__menu-item"><a class="sidebar__link" href="mail.html" aria-expanded="false"><span class="sidebar__link-icon">
-                      <svg class="icon-icon-email">
-                        <use xlink:href="#icon-email"></use>
-                      </svg></span><span class="sidebar__link-text">Mail</span><span class="badge badge--red">20</span></a>
-                            </li>
-                            <li class="sidebar__menu-item"><a class="sidebar__link" href="chat.html" aria-expanded="false"><span class="sidebar__link-icon">
-                      <svg class="icon-icon-chat">
-                        <use xlink:href="#icon-chat"></use>
-                      </svg></span><span class="sidebar__link-text">Chat</span></a>
-                            </li>
+
+
                             <li class="sidebar__menu-item"><a class="sidebar__link" href="contacts.html" aria-expanded="false"><span class="sidebar__link-icon">
                       <svg class="icon-icon-contacts">
                         <use xlink:href="#icon-contacts"></use>
                       </svg></span><span class="sidebar__link-text">Contacts</span></a>
                             </li>
-                            <li class="sidebar__menu-item"><a class="sidebar__link" href="todo.html" aria-expanded="false"><span class="sidebar__link-icon">
-                      <svg class="icon-icon-todo">
-                        <use xlink:href="#icon-todo"></use>
-                      </svg></span><span class="sidebar__link-text">ToDo</span></a>
+
+                            <li class="sidebar__menu-item"><a class="sidebar__link" href="customers.html" aria-expanded="false"><span class="sidebar__link-icon">
+                      <svg class="icon-icon-email-2">
+                        <use xlink:href="#icon-email-2"></use>
+                      </svg></span><span class="sidebar__link-text">Customers</span></a>
                             </li>
-                            <li class="sidebar__menu-item"><a class="sidebar__link" href="file-manager.html" aria-expanded="false"><span class="sidebar__link-icon">
-                      <svg class="icon-icon-folder">
-                        <use xlink:href="#icon-folder"></use>
-                      </svg></span><span class="sidebar__link-text">File Manager</span></a>
+
+
+                            <li class="sidebar__menu-item"><a class="sidebar__link" href="shop.html" aria-expanded="false"><span class="sidebar__link-icon">
+                      <svg class="icon-icon-wallet">
+                        <use xlink:href="#icon-wallet"></use>
+                      </svg></span><span class="sidebar__link-text">Shop</span></a>
                             </li>
-                            <li class="sidebar__menu-item"><a class="sidebar__link" href="timeline.html" aria-expanded="false"><span class="sidebar__link-icon">
-                      <svg class="icon-icon-clock">
-                        <use xlink:href="#icon-clock"></use>
-                      </svg></span><span class="sidebar__link-text">Timeline</span></a>
+                            <li class="sidebar__menu-item"><a class="sidebar__link" href="settings.html" aria-expanded="false"><span class="sidebar__link-icon">
+                      <svg class="icon-icon-settings">
+                        <use xlink:href="#icon-settings"></use>
+                      </svg></span><span class="sidebar__link-text">Settings</span></a>
                             </li>
+
+                            <li class="sidebar__menu-item"><a class="sidebar__link" href="404.html" aria-expanded="false"><span class="sidebar__link-icon"></span><span class="sidebar__link-text">404</span></a>
+                            </li>
+
                             <li class="sidebar__menu-item"><a class="sidebar__link" href="#" data-toggle="collapse" data-target="#Auth" aria-expanded="false"><span class="sidebar__link-icon">
                       <svg class="icon-icon-password">
                         <use xlink:href="#icon-password"></use>
@@ -917,165 +911,182 @@
                                     <ul class="sidebar__collapse-menu">
                                         <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-login.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Login</span></a>
                                         </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-login-v2.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Login V.2</span></a>
-                                        </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-login-v3.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Login V.3</span></a>
-                                        </li>
                                         <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-create.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Create Account</span></a>
-                                        </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-create-v2.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Create Account V.2</span></a>
-                                        </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-create-v3.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Create Account V.3</span></a>
-                                        </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-lock.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Lock</span></a>
-                                        </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-lock-v2.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Lock V.2</span></a>
-                                        </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-lock-v3.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Lock V.3</span></a>
-                                        </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-forgot.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Forgot</span></a>
-                                        </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-forgot-v2.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Forgot V.2</span></a>
-                                        </li>
-                                        <li class="sidebar__menu-item"><a class="sidebar__link" href="auth-forgot-v3.html"><span class="sidebar__link-signal"></span><span class="sidebar__link-text">Forgot V.3</span></a>
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li class="sidebar__menu-item"><a class="sidebar__link" href="404.html" aria-expanded="false"><span class="sidebar__link-icon"></span><span class="sidebar__link-text">404</span></a>
-                            </li>
-                            <li class="sidebar__menu-item"><a class="sidebar__link" href="ui-kit.html" aria-expanded="false"><span class="sidebar__link-icon">
-                      <svg class="icon-icon-settings">
-                        <use xlink:href="#icon-settings"></use>
-                      </svg></span><span class="sidebar__link-text">UI Kit</span></a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </aside>
-        <main class="page-content">
-            <div class="container">
-                <div class="page-header">
-                    <h1 class="page-header__title">Orders</h1>
-                </div>
-                <div class="page-tools">
-                    <div class="page-tools__breadcrumbs">
-                        <div class="breadcrumbs">
-                            <div class="breadcrumbs__container">
-                                <ol class="breadcrumbs__list">
-                                    <li class="breadcrumbs__item">
-                                        <a class="breadcrumbs__link" href="index.html">
-                                            <svg class="icon-icon-home breadcrumbs__icon">
-                                                <use xlink:href="#icon-home"></use>
-                                            </svg>
-                                            <svg class="icon-icon-keyboard-right breadcrumbs__arrow">
-                                                <use xlink:href="#icon-keyboard-right"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="breadcrumbs__item disabled"><a class="breadcrumbs__link" href="#"><span>E-commerce</span>
-                        <svg class="icon-icon-keyboard-right breadcrumbs__arrow">
-                          <use xlink:href="#icon-keyboard-right"></use>
-                        </svg></a>
-                                    </li>
-                                    <li class="breadcrumbs__item active"><span class="breadcrumbs__link">Orders</span>
-                                    </li>
-                                </ol>
+        <main class="page-content page-content--full">
+            <div class="todo-grid">
+                <aside class="sidebar-panel scrollbar-thin" id="sidebarPanel" data-simplebar="data-simplebar">
+                    <div class="sidebar-panel__top">
+                        <button class="button button--primary" data-modal="#addTask"><span class="button__icon button__icon--left">
+                  <svg class="icon-icon-plus">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg></span><span class="button__text">Add Task</span>
+                        </button>
+                    </div>
+                    <div class="sidebar-panel__content">
+                        <div class="sidebar-panel__nav">
+                            <ul class="sidebar-panel__menu">
+                                <li class="sidebar-panel__menu-item">
+                                    <a class="sidebar-panel__menu-link active" href="#">
+                                        <svg class="icon-icon-todo">
+                                            <use xlink:href="#icon-todo"></use>
+                                        </svg><span class="sidebar-panel__menu-text">All Tasks</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-panel__nav">
+                            <h3 class="sidebar-panel__nav-title">Filters</h3>
+                            <ul class="sidebar-panel__menu">
+                                <li class="sidebar-panel__menu-item">
+                                    <a class="sidebar-panel__menu-link" href="#">
+                                        <svg class="icon-icon-star">
+                                            <use xlink:href="#icon-star"></use>
+                                        </svg><span class="sidebar-panel__menu-text">Starred</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-panel__menu-item">
+                                    <a class="sidebar-panel__menu-link" href="#">
+                                        <svg class="icon-icon-detail">
+                                            <use xlink:href="#icon-detail"></use>
+                                        </svg><span class="sidebar-panel__menu-text">Priority</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-panel__menu-item">
+                                    <a class="sidebar-panel__menu-link" href="#">
+                                        <svg class="icon-icon-clock">
+                                            <use xlink:href="#icon-clock"></use>
+                                        </svg><span class="sidebar-panel__menu-text">Sheduled</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-panel__menu-item">
+                                    <a class="sidebar-panel__menu-link" href="#">
+                                        <svg class="icon-icon-calendar">
+                                            <use xlink:href="#icon-calendar"></use>
+                                        </svg><span class="sidebar-panel__menu-text">Today</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-panel__menu-item">
+                                    <a class="sidebar-panel__menu-link" href="#">
+                                        <svg class="icon-icon-status">
+                                            <use xlink:href="#icon-status"></use>
+                                        </svg><span class="sidebar-panel__menu-text">Done</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-panel__menu-item">
+                                    <a class="sidebar-panel__menu-link" href="#">
+                                        <svg class="icon-icon-trash">
+                                            <use xlink:href="#icon-trash"></use>
+                                        </svg><span class="sidebar-panel__menu-text">Deleted</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-panel__section">
+                            <h3 class="sidebar-panel__section-title">Labels</h3>
+                            <div class="sidebar-panel__labels">
+                                <div class="sidebar-panel__labels-item"><span class="marker-item color-red"></span> Project
+                                </div>
+                                <div class="sidebar-panel__labels-item"><span class="marker-item color-teal"></span> Frontend
+                                </div>
+                                <div class="sidebar-panel__labels-item"><span class="marker-item color-orange"></span> Backend
+                                </div>
+                                <div class="sidebar-panel__labels-item"><span class="marker-item color-green"></span> Issue
+                                </div>
+                                <div class="sidebar-panel__labels-item"><span class="marker-item color-orange-dark"></span> Work
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="page-tools__right">
-                        <div class="page-tools__right-row">
-                            <div class="page-tools__right-item"><a class="button-icon" href="#"><span class="button-icon__icon">
-                      <svg class="icon-icon-print">
-                        <use xlink:href="#icon-print"></use>
-                      </svg></span></a>
-                            </div>
-                            <div class="page-tools__right-item"><a class="button-icon" href="#"><span class="button-icon__icon">
-                      <svg class="icon-icon-import">
-                        <use xlink:href="#icon-import"></use>
-                      </svg></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="toolbox">
-                    <div class="toolbox__row row gutter-bottom-xs">
-                        <div class="toolbox__left col-12 col-lg">
-                            <div class="toolbox__left-row row row--xs gutter-bottom-xs">
-                                <div class="form-group form-group--inline col-12 col-sm-auto">
-                                    <label class="form-label">Show</label>
-                                    <div class="input-group input-group--white input-group--append">
-                                        <input class="input input--select" type="text" value="10" size="1" data-toggle="dropdown" readonly><span class="input-group__arrow">
-                        <svg class="icon-icon-keyboard-down">
-                          <use xlink:href="#icon-keyboard-down"></use>
-                        </svg></span>
-                                        <div class="dropdown-menu dropdown-menu--right dropdown-menu--fluid js-dropdown-select"><a class="dropdown-menu__item active" href="#" tabindex="0" data-value="10">10</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="15">15</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="20">20</a>
-                                            <a
-                                            class="dropdown-menu__item" href="#" tabindex="0" data-value="25">25</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="50">50</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group form-group--inline col col-sm-auto">
-                                    <div class="input-group input-group--white input-group--prepend input-group--append">
-                                        <div class="input-group__prepend">
-                                            <svg class="icon-icon-calendar">
-                                                <use xlink:href="#icon-calendar"></use>
+                </aside>
+                <div class="todo-content">
+                    <div class="todo-content__top">
+                        <div class="container">
+                            <div class="row row--xs flex-nowrap align-items-center justify-content-between">
+                                <div class="col">
+                                    <div class="d-flex align-items-center">
+                                        <button class="toggle-sidebar toggle-sidebar--secondary js-toggle-sidebar-panel" type="button" data-toggle="#sidebarPanel">
+                                            <svg class="icon-icon-menu">
+                                                <use xlink:href="#icon-menu"></use>
                                             </svg>
-                                        </div>
-                                        <input class="input input--select" type="text" value="01.12.18 / 07.12.18" readonly><span class="input-group__arrow">
-                        <svg class="icon-icon-keyboard-down">
-                          <use xlink:href="#icon-keyboard-down"></use>
-                        </svg></span>
-                                    </div>
-                                </div>
-                                <div class="form-group form-group--inline col-12 col-sm-auto d-none d-sm-block">
-                                    <div class="toolbox__status input-group input-group--white input-group--append">
-                                        <input class="input input--select" type="text" value="All status" data-toggle="dropdown" readonly><span class="input-group__arrow">
-                        <svg class="icon-icon-keyboard-down">
-                          <use xlink:href="#icon-keyboard-down"></use>
-                        </svg></span>
-                                        <div class="dropdown-menu dropdown-menu--right dropdown-menu--fluid js-dropdown-select"><a class="dropdown-menu__item active" href="#" tabindex="0" data-value="All status"><span class="marker-item"></span> All status</a>
-                                            <a class="dropdown-menu__item" href="#" tabindex="0" data-value="Complete"><span class="marker-item color-green"></span> Complete</a><a class="dropdown-menu__item" href="#" tabindex="0" data-value="Pending"><span class="marker-item color-blue"></span> Pending</a><a class="dropdown-menu__item"
-                                            href="#" tabindex="0" data-value="Processing"><span class="marker-item color-orange"></span> Processing</a>
+                                        </button>
+                                        <button class="toggle-search toggle-search--module" type="button" data-search="#search0">
+                                            <svg class="icon-icon-search">
+                                                <use xlink:href="#icon-search"></use>
+                                            </svg>
+                                            <svg class="icon-icon-cross">
+                                                <use xlink:href="#icon-cross"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="page-header page-header--inline">
+                                            <h1 class="page-header__title">All Tasks <span class="text-grey">(30)</span></h1>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="toolbox__right col-12 col-lg-auto">
-                            <div class="toolbox__right-row row row--xs flex-nowrap">
-                                <div class="col col-lg-auto">
-                                    <form class="toolbox__search" method="GET">
-                                        <div class="input-group input-group--white input-group--prepend">
+                                <div class="col-auto position-static">
+                                    <form class="module-search" id="search0" method="GET">
+                                        <div class="input-group input-group--prepend">
                                             <div class="input-group__prepend">
                                                 <svg class="icon-icon-search">
                                                     <use xlink:href="#icon-search"></use>
                                                 </svg>
                                             </div>
-                                            <input class="input" type="text" placeholder="Search orders">
+                                            <input class="input" type="text" placeholder="Search task">
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="table-wrapper">
-                    <div class="table-wrapper__content table-collapse scrollbar-thin scrollbar-visible" data-simplebar>
-                        <table class="table table--lines">
-                            <colgroup>
-                                <col width="90px">
+                    <div class="todo-content__items-header">
+                        <div class="todo-content__items-header-column">
+                            <div class="breadcrumbs">
+                                <div class="breadcrumbs__container">
+                                    <ol class="breadcrumbs__list">
+                                        <li class="breadcrumbs__item">
+                                            <a class="breadcrumbs__link" href="index.html">
+                                                <svg class="icon-icon-home breadcrumbs__icon">
+                                                    <use xlink:href="#icon-home"></use>
+                                                </svg>
+                                                <svg class="icon-icon-keyboard-right breadcrumbs__arrow">
+                                                    <use xlink:href="#icon-keyboard-right"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumbs__item disabled"><a class="breadcrumbs__link" href="#"><span>E-commerce</span>
+                                            <svg class="icon-icon-keyboard-right breadcrumbs__arrow">
+                                                <use xlink:href="#icon-keyboard-right"></use>
+                                            </svg></a>
+                                        </li>
+                                        <li class="breadcrumbs__item active"><span class="breadcrumbs__link">Products</span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <div class="table-wrapper__content table-collapse scrollbar-thin scrollbar-visible" data-simplebar>
+                            <table class="table table--lines">
+                                <colgroup>
+                                    <col width="90px">
                                     <col width="100px">
-                                        <col width="16%">
-                                            <col>
-                                                <col>
-                                                    <col>
-                                                        <col>
-                                                            <col>
-                            </colgroup>
-                            <thead class="table__header">
+                                    <col width="16%">
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead class="table__header">
                                 <tr class="table__header-row">
                                     <th>
                                         <div class="table__checkbox table__checkbox--all">
@@ -1101,8 +1112,8 @@
                                     </th>
                                     <th class="table__actions"></th>
                                 </tr>
-                            </thead>
-                            <tbody>
+                                </thead>
+                                <tbody>
                                 <tr class="table__row">
                                     <td class="table__td">
                                         <div class="table__checkbox table__checkbox--all">
@@ -1683,43 +1694,45 @@
                                         </div>
                                     </td>
                                 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="table-wrapper__footer">
-                        <div class="row">
-                            <div class="table-wrapper__show-result col text-grey"><span class="d-none d-sm-inline-block">Showing</span> 1 to 10 <span class="d-none d-sm-inline-block">of 50 items</span>
-                            </div>
-                            <div class="table-wrapper__pagination col-auto">
-                                <ol class="pagination">
-                                    <li class="pagination__item">
-                                        <a class="pagination__arrow pagination__arrow--prev" href="#">
-                                            <svg class="icon-icon-keyboard-left">
-                                                <use xlink:href="#icon-keyboard-left"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="pagination__item active"><a class="pagination__link" href="#">1</a>
-                                    </li>
-                                    <li class="pagination__item"><a class="pagination__link" href="#">2</a>
-                                    </li>
-                                    <li class="pagination__item"><a class="pagination__link" href="#">3</a>
-                                    </li>
-                                    <li class="pagination__item pagination__item--dots">...</li>
-                                    <li class="pagination__item"><a class="pagination__link" href="#">10</a>
-                                    </li>
-                                    <li class="pagination__item">
-                                        <a class="pagination__arrow pagination__arrow--next" href="#">
-                                            <svg class="icon-icon-keyboard-right">
-                                                <use xlink:href="#icon-keyboard-right"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ol>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-wrapper__footer">
+                            <div class="row">
+                                <div class="table-wrapper__show-result col text-grey"><span class="d-none d-sm-inline-block">Showing</span> 1 to 10 <span class="d-none d-sm-inline-block">of 50 items</span>
+                                </div>
+                                <div class="table-wrapper__pagination col-auto">
+                                    <ol class="pagination">
+                                        <li class="pagination__item">
+                                            <a class="pagination__arrow pagination__arrow--prev" href="#">
+                                                <svg class="icon-icon-keyboard-left">
+                                                    <use xlink:href="#icon-keyboard-left"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="pagination__item active"><a class="pagination__link" href="#">1</a>
+                                        </li>
+                                        <li class="pagination__item"><a class="pagination__link" href="#">2</a>
+                                        </li>
+                                        <li class="pagination__item"><a class="pagination__link" href="#">3</a>
+                                        </li>
+                                        <li class="pagination__item pagination__item--dots">...</li>
+                                        <li class="pagination__item"><a class="pagination__link" href="#">10</a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a class="pagination__arrow pagination__arrow--next" href="#">
+                                                <svg class="icon-icon-keyboard-right">
+                                                    <use xlink:href="#icon-keyboard-right"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="backdrop-sidebar-panel"></div>
             </div>
         </main>
     </div>
@@ -1753,6 +1766,7 @@
     <script src="js/vendor/scrollmagic/ScrollMagic.min.js"></script>
     <script src="js/vendor/scrollmagic/debug.addIndicators.min.js"></script>
     <script src="js/components.js"></script>
+    <script src="js/themeSwitcher.js"></script>
     <script src="js/common.js"></script>
 </body>
 
