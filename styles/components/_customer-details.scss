@@ -1,0 +1,51 @@
+.page-content {
+  .todo-grid {
+    .todo-content {
+      @media (min-width: 1200px) {
+        .todo-content__top {
+          display: none;
+        }
+      }
+      .container.todo-content__items {
+        padding-top: 30px;
+      }
+    }
+  }
+  aside {
+    padding-top: 30px;
+    .sidebar-panel__nav {
+      .sidebar-panel__menu {
+        .sidebar-panel__menu-item {
+          .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px;
+            &:first-child {
+              padding-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.tab-pane {
+  .page-header {
+    justify-content: space-between;
+  }
+  .toolbox {
+    min-width: 100%;
+    margin-top: 30px;
+    &:first-child {
+      margin-top: 0;
+    }
+    button {
+      text-align: left;
+      min-width: 100%;
+    }
+  }
+  &#tab-verify {
+    padding: 0 !important;
+  }
+}

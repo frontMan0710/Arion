@@ -1,0 +1,19 @@
+.tab-content .tab-pane {
+  padding: 30px 40px;
+}
+.tab-content .tab-pane#tab-request-data {
+  padding: 0;
+}
+@media (max-width: 620px) {
+  .tab-content .tab-pane {
+    padding: 27px 17px;
+  }
+}
+@media (max-width: 620px) {
+  .tab-content .tab-pane form .row .form-group--lg {
+    min-width: 100%;
+  }
+}
+.tab-content .tab-pane form .row .form-group--lg .input-group textarea:focus, .tab-content .tab-pane form .row .form-group--lg .input-group input:focus {
+  border: 1px var(--primary-color) solid;
+}

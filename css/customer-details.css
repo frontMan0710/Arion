@@ -1,0 +1,47 @@
+@media (min-width: 1200px) {
+  .page-content .todo-grid .todo-content .todo-content__top {
+    display: none;
+  }
+}
+.page-content .todo-grid .todo-content .container.todo-content__items {
+  padding-top: 30px;
+}
+.page-content aside {
+  padding-top: 30px;
+}
+.page-content aside .sidebar-panel__nav .sidebar-panel__menu .sidebar-panel__menu-item .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px;
+}
+.page-content aside .sidebar-panel__nav .sidebar-panel__menu .sidebar-panel__menu-item .form-group:first-child {
+  padding-top: 0;
+}
+
+.tab-pane .page-header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.tab-pane .toolbox {
+  min-width: 100%;
+  margin-top: 30px;
+}
+.tab-pane .toolbox:first-child {
+  margin-top: 0;
+}
+.tab-pane .toolbox button {
+  text-align: left;
+  min-width: 100%;
+}
+.tab-pane#tab-verify {
+  padding: 0 !important;
+}
