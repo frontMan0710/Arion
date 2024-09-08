@@ -30,6 +30,13 @@
     }
   }
 }
+nav.nav-tabs {
+  @media (max-width: 832px) {
+    .nav-link {
+      width: 50%;
+    }
+  }
+}
 .tab-pane {
   .page-header {
     justify-content: space-between;
@@ -41,8 +48,15 @@
       margin-top: 0;
     }
     button {
-      text-align: left;
+      display: flex;
+      justify-content: space-between;
       min-width: 100%;
+      span.sidebar__link-arrow {
+        svg {
+          color: var(--white);
+          transform: rotate(90deg);
+        }
+      }
     }
   }
   &#tab-verify {

@@ -26,6 +26,12 @@
   padding-top: 0;
 }
 
+@media (max-width: 832px) {
+  nav.nav-tabs .nav-link {
+    width: 50%;
+  }
+}
+
 .tab-pane .page-header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -39,8 +45,18 @@
   margin-top: 0;
 }
 .tab-pane .toolbox button {
-  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-width: 100%;
+}
+.tab-pane .toolbox button span.sidebar__link-arrow svg {
+  color: var(--white);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .tab-pane#tab-verify {
   padding: 0 !important;
